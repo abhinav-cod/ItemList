@@ -1,11 +1,18 @@
-FROM python:3.9-slim
+# Use the official Python image from the Docker Hub
+FROM python:3.8-slim-buster
 
-ENV PYTHONUNBUFFERED 1
-
+# Set the working directory
 WORKDIR /code
 
-COPY requirements.txt /code/
+# Copy the requirements file into the image
+COPY requirements.txt .
 
+# Install the dependencies
 RUN pip install -r requirements.txt
 
-COPY . /code/
+# Copy the rest of the code into the image
+COPY . .
+
+# Run migrations and start the Django development server
+CMD ["python", "manage.py", "migrate"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

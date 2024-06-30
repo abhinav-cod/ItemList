@@ -1,6 +1,6 @@
 import json
 from django.core.management.base import BaseCommand
-from ItemList.api.models import Items
+from api.models import Items
 
 
 class Command(BaseCommand):

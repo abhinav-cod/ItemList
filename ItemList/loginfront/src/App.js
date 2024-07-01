@@ -5,7 +5,7 @@ import Login from './Login';
 //import Logout from './Logout';
 import Home from './Home';
 import ItemList from './ItemList';
-//import ItemEditor from './ItemEditor';
+import ItemEditor from './ItemEditor';
 import './App.css';
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
           <Route path="/login" element={<Login />} />
 //          <Route path="/logout" element={isAuthenticated ? <Logout /> :  <Navigate to="/login" />} />
           <Route path="/items" element={isAuthenticated ? <ItemList /> : <Navigate to="/login" />} />
-//          <Route path="/edit/:id" element={isAuthenticated ? <ItemEditor /> : <Navigate to="/login" />} />
-//          <Route path="*" element={<Login />} />
+          <Route path="/edit/:id" element={isAuthenticated ? <ItemEditor /> : <Navigate to="/login" />} />
+          <Route path="*" element={<Login />} />
         </Routes>
       </Router>
     </ApiProvider>

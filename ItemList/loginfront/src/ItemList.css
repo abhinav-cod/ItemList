@@ -1,0 +1,12 @@
+.item-list-container {
+  padding: 20px;
+}
+
+.item-list-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.item-list-container li {
+  margin: 5px 0;
+}

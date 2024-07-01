@@ -57,7 +57,7 @@ cd ItemList
    ```sh
    npm install
    ```
-   if error occurs or vulnerablities are there try ```npm install --no-audit```
+   if error occurs or vulnerablities are there, try ```npm install --no-audit```
 
 3. run loginfront server:
    ```sh
@@ -90,8 +90,9 @@ DELETE /items/:id/: Delete an item
 3. To retrieve any specefic element provide id of that element along with ```http://localhost:3000/items/{id}```
 
 4. To edit any field of any specific element go to : ```http://localhost:3000/edit/{id}``` , make changes and save.
+5. Or directly click edit on items page.
 
-5. To Logout and login using new credential:
+6. To Logout and login using new credential:
    ```sh
        http://localhost:3000/logout/
    ```
@@ -111,11 +112,3 @@ If an API request fails due to token expiry, the hook automatically attempts to 
 
 API Methods:
 The hook provides get, post, put, and delete methods for making API requests, ensuring that the access token is included in the headers of each request.
-
-
-
-
-### Assumption:
-``` id generated will be copied from Backend server ``` 
-
-   
